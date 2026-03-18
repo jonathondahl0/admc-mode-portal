@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ⚠️ AGENT MUST REPLACE: These are placeholder colors. You MUST define a custom palette before writing components. */
+    /* The template uses distinctive placeholder colors to force customization - do NOT use these in production! */
+    
+    /* 
+     * EXAMPLE PALETTES (use as inspiration, replace with your own):
+     * 
+     * Modern SaaS (Business/Enterprise):
+     * --primary: 217 91% 60%;        (Blue #2563EB)
+     * --accent: 217 91% 65%;         (Lighter blue #3B82F6)
+     * 
+     * Bold Tech (Startups/Developer Tools):
+     * --primary: 262 83% 58%;        (Purple #8B5CF6)
+     * --accent: 262 83% 68%;         (Lighter purple #A855F7)
+     * 
+     * Quantum Rose (Creative/Design):
+     * --primary: 330 81% 50%;        (Pink #E6067A)
+     * --accent: 330 81% 70%;         (Lighter pink #F472B6)
+     * 
+     * Ocean Depth (Calm/Professional):
+     * --primary: 200 98% 39%;        (Deep teal #0D9488)
+     * --accent: 200 98% 50%;         (Teal #14B8A6)
+     * 
+     * Sunset Warmth (Friendly/Welcoming):
+     * --primary: 24 95% 53%;         (Orange #F97316)
+     * --accent: 24 95% 63%;          (Lighter orange #FB923C)
+     */
+    
+    /* MailBox SMTP Client — Custom Palette */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 13%;
+    --primary: 213 89% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 17% 95%;
+    --secondary-foreground: 220 13% 20%;
+    --muted: 210 17% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 213 89% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 4 90% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 213 89% 51%;
+
+    /* Chart */
+    --chart-1: 213 89% 51%;
+    --chart-2: 162 72% 45%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 280 67% 60%;
+    --chart-5: 4 90% 58%;
+
+    /* Sidebar */
+    --sidebar: 210 17% 97%;
+    --sidebar-foreground: 220 13% 20%;
+    --sidebar-primary: 213 89% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 17% 93%;
+    --sidebar-accent-foreground: 220 13% 20%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 213 89% 51%;
+
+    /* Fonts */
+    --font-sans: 'DM Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+
+    /* Shadows */
+    --shadow-2xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.05);
+    --shadow-sm: 0px 4px 8px -1px hsl(0 0% 0% / 0.10), 0px 1px 2px -2px hsl(0 0% 0% / 0.10);
+    --shadow: 0px 4px 8px -1px hsl(0 0% 0% / 0.10), 0px 1px 2px -2px hsl(0 0% 0% / 0.10);
+    --shadow-md: 0px 4px 8px -1px hsl(0 0% 0% / 0.10), 0px 2px 4px -2px hsl(0 0% 0% / 0.10);
+    --shadow-lg: 0px 4px 8px -1px hsl(0 0% 0% / 0.10), 0px 4px 6px -2px hsl(0 0% 0% / 0.10);
+    --shadow-xl: 0px 4px 8px -1px hsl(0 0% 0% / 0.10), 0px 8px 10px -2px hsl(0 0% 0% / 0.10);
+    --shadow-2xl: 0px 4px 8px -1px hsl(0 0% 0% / 0.25);
+
+    /* Misc */
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* MailBox dark mode */
+    --background: 220 14% 10%;
+    --foreground: 210 17% 90%;
+    --card: 220 14% 13%;
+    --card-foreground: 210 17% 90%;
+    --popover: 220 14% 13%;
+    --popover-foreground: 210 17% 90%;
+    --primary: 213 89% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 18%;
+    --secondary-foreground: 210 17% 75%;
+    --muted: 220 14% 18%;
+    --muted-foreground: 220 9% 55%;
+    --accent: 213 89% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 4 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 14% 20%;
+    --input: 220 14% 20%;
+    --ring: 213 89% 56%;
+    --chart-1: 213 89% 56%;
+    --chart-2: 162 72% 45%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 280 67% 60%;
+    --chart-5: 4 85% 55%;
+    --sidebar: 220 14% 8%;
+    --sidebar-foreground: 210 17% 85%;
+    --sidebar-primary: 213 89% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 16%;
+    --sidebar-accent-foreground: 210 17% 80%;
+    --sidebar-border: 220 14% 18%;
+    --sidebar-ring: 213 89% 56%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    letter-spacing: var(--tracking-normal);
+  }
+
+  /* Editor Overrides */
+  .rsw-editor {
+    min-height: 100% !important;
+    border: none !important;
+    color: hsl(var(--foreground)) !important;
+    background: transparent !important;
+  }
+  
+  .rsw-toolbar {
+    background: hsl(var(--secondary) / 0.5) !important;
+    border-bottom: 1px solid hsl(var(--border)) !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+  }
+
+  .rsw-btn {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  .rsw-btn:hover {
+    background: hsl(var(--secondary)) !important;
+  }
+
+  .rsw-btn[data-active="true"] {
+    background: hsl(var(--primary) / 0.1) !important;
+    color: hsl(var(--primary)) !important;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
